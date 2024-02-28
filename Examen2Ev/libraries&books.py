@@ -2,14 +2,9 @@ import json
 import pandas as pd
 from datetime import datetime
 
-with open("users.json", "r") as myFile:
+with open("users.json", "r",  encoding='utf-8') as myFile:
     datosUser = json.load(myFile)
 
-try:
-    nuevoDocument = open("libraries-and-books.json", "w")
-except:
-    open("secure-users.json", "c")
-    nuevoDocument = open("libraries-and-books.json", "c")
 
 libraries = []
 listaBooks = []
